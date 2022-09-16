@@ -1,7 +1,13 @@
-<p>Listado de héroes</p>
-<p>Héroe borrado {{heroeBorrado}} </p>
-<ul>
+
+<p *ngIf="heroeBorrado !== ''; else noHayHeroes">Último héroe borrado: {{heroeBorrado}} </p>
+
+<ng-template #noHayHeroes></ng-template>
+
+<ul *ngIf="misheroes.length !==0; else noHayHeroes2">
+  <p>Listado de héroes</p>
   <li *ngFor="let varlet of misheroes;let indice=index">
     {{ varlet }} <button (click)="borrarHeroe(indice)">Borrar</button>
   </li>
+
 </ul>
+<ng-template #noHayHeroes2></ng-template>
