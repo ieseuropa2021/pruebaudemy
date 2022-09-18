@@ -10,21 +10,10 @@ import { Personaje } from '../interfaces/personaje.component';
 })
 export class PaginaInicioComponent {
 
-  personajes: Personaje[]=[
-		{nombre: 'Goku',
-		  poder: 15000
-		},
-		{nombre: 'Vegeta',
-		  poder: 7500
-		}
-	];
 
   nuevo: Personaje={
       nombre: 'Nombre padre',
 		  poder: 70
   }
-
-  agregarNuevoPersonaje(argumento: Personaje) {
-    this.personajes.push(argumento);
-    }
+  constructor() {}
 }

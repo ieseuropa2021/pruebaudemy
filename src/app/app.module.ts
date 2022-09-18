@@ -9,6 +9,9 @@ import { HeroesModule } from './heroes/heroes.module';
 import { DbzModule } from './dbz/dbz.module';
 
 
+import { DbzService } from './dbz/services/dbz.service';
+
+
 
 
 @NgModule({
@@ -25,7 +28,9 @@ import { DbzModule } from './dbz/dbz.module';
     CommonModule //Para cargar las directivas *ngFor,....
   ],
   //Si deseamos que algunos componentes sean visibles fuera de este módulo se declara mediante exports: [ lista de componentes]
-  providers: [],
+  providers: [
+    DbzService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

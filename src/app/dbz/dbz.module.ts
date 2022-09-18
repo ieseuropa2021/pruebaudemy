@@ -6,6 +6,7 @@ import { PaginaInicioComponent } from './pagina-inicio/pagina-inicio.component';
 import { PersonajesComponent } from './personajes/personajes.component';
 import { AgregarComponent } from './agregar/agregar.component';
 
+import { DbzService } from './services/dbz.service';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,9 @@ import { AgregarComponent } from './agregar/agregar.component';
   ],
   exports:[
     PaginaInicioComponent
+  ],
+  providers: [
+    DbzService
   ]
 })
 export class DbzModule { }
